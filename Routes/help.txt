@@ -1,0 +1,23 @@
+Express Instance (app):
+We create an instance of Express using const app = express();.
+This instance represents our server and allows us to define routes, middleware, and other configurations.
+Middleware:
+Middleware functions execute in the order they are defined.
+cors middleware enables Cross-Origin Resource Sharing (CORS) to handle requests from different origins.
+cookieParser parses cookies from incoming requests.
+bodyParser parses request bodies (URL-encoded or JSON).
+Local Routes:
+We import local route modules (e.g., open, auth, etc.).
+Each route module handles specific endpoints and their associated logic.
+Database Connection:
+We require the database connection setup (usually done in connection.js).
+Ensure your database credentials and connection details are correctly configured.
+Port Declaration:
+We define the port on which the server will listen.
+If no environment variable (process.env.PORT) is set, default to port 3500.
+Route Handling:
+We define the routes using app.use().
+For example, requests to /auth will be handled by the auth route module.
+Server Initialization:
+We start the server by calling app.listen(port, callback).
+The callback function logs a message when the server is up and running.
