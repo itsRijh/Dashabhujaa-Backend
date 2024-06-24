@@ -1,0 +1,22 @@
+Mongoose Schema Definitions:
+The code defines three Mongoose schemas: user, products, and services.
+Each schema represents a collection in MongoDB and specifies the structure of documents within that collection.
+User Schema:
+The user schema includes fields such as NAME, EMAIL, PASSWORD, PROFILE_PIC, and more.
+It also has arrays for SERVICE_INTEREST and PRODUCT_INTEREST, which contain objects with additional details.
+The schema defines various data types (e.g., String, Number) and validation rules (e.g., required, unique).
+Products Schema:
+The products schema represents product-related information.
+It includes fields like PRODUCT_ID, CITY, STATE, TITLE, POSTED_BY, and others.
+The schema also uses the fuzzySearch plugin for searching by TITLE and CATEGORY.
+Services Schema:
+The services schema is similar to the products schema but focuses on services.
+It includes fields like SERVICE_ID, TITLE, CITY, STATE, and others.
+Like the products schema, it also uses the fuzzySearch plugin.
+Other Schemas:
+The code snippet also defines schemas for askDesk (question-answer data) and otp (one-time passwords).
+Fuzzy Searching:
+The fuzzySearch plugin enables fuzzy searching in documents based on specified fields (e.g., TITLE, CATEGORY).
+It creates n-grams for the selected keys, allowing for approximate matches in search queries.
+Exporting Models:
+The module.exports statements export the defined models (e.g., User, products, services) for use in other parts of the application.
